@@ -20,7 +20,7 @@ const reactionSchema = new Schema(
         createdAt: {
             type: Date,
             default: Date.now,
-            get: (time) => dateFormat(time, "mmm dS, yyyy at hh:MM TT")
+            get: (time) => dateFormat(time, "mmm dS, yyyy ...at... hh:MM TT")
         }
     },
     {
