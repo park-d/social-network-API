@@ -34,7 +34,7 @@ Video walkthrough of view and CRUD routes for User
 
 Video walkthrough of view and CRUD routes for Thought
 
-![View and CRUD routes for Thought]()
+![View and CRUD routes for Thought](./assets/gifs/thoughtRoutes.gif)
 
 ---
 
