@@ -43,7 +43,7 @@ module.exports = {
             .then(() => res.json({message: 'User and associated thoughts deleted!'}))
             .catch((err) => res.status(500).json(err));
     },
-    ///api/users/:userId/friends/:friendId
+    // /api/users/:userId/friends/:friendId
     addFriend(req, res) {
         User.findOneAndUpdate(
             {_id: req.params.userId},

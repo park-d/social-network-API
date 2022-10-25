@@ -7,11 +7,11 @@ module.exports = {
             .catch((err) => res.status(500).json(err));
     },
     getThoughtsbyID(req, res) {
-        Thought.findOne({_id: req.params.applicationId})
+        Thought.findOne({_id: req.params.thoughtId})
             .then((thought) =>
                 !thought
                     ? res.status(404).json({message: 'That thought doesn\'t exist'})
-                    : res.json(application)
+                    : res.json(thought)
             )
             .catch((err) => res.status(500).json(err));
     },
