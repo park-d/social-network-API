@@ -16,8 +16,8 @@ connection.once('open', async () => {
     // Add users to the collection and await the results
     await User.collection.insertMany([
         {
-            username: "Devan",
-            email: "devan@email.com"
+            username: "Paul",
+            email: "pool@email.com"
         },
         {
             username: "Roy",
