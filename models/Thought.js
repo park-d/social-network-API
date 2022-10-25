@@ -1,6 +1,6 @@
 const {Schema, model} = require('mongoose');
 const Reaction = require('./Reaction.js');
-const dateFormat = require('dateformat');
+const dayjs = require('dayjs')
 
 // Schema to create User model
 const thoughtSchema = new Schema(
@@ -14,7 +14,7 @@ const thoughtSchema = new Schema(
         createdAt: {
             type: Date,
             default: Date.now,
-            get: (time) => dateFormat(time, "mmm dS, yyyy ...at... hh:MM TT")
+            get: (time) => dayjs(time).format("mmm Do, YYYY [at] hh:mm A")
         },
         username: {
             type: String,
