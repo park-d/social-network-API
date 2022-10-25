@@ -22,30 +22,27 @@ To seed 3 users into the database, run ``` npm run seed ```. Then run the applic
 
 Video walkthrough of creating and seeding the database, and starting the application
 
-![Seeding database and starting application]()
+![Seeding database and starting application](./assets/gifs/seed%26start.gif)
 
 ---
 
-Video walkthrough 1
+Video walkthrough of view and CRUD routes for User
 
-![Description 1]()
-
----
-
-Video walkthrough 2
-
-![Description 2]()
+![View and CRUD routes for User](./assets/gifs/userRoutes.gif)
 
 ---
 
-Video walkthrough 3
+Video walkthrough of view and CRUD routes for Thought
 
-![Description 3]()
+![View and CRUD routes for Thought]()
+
+---
 
 ## Credits
 While working on this project, I worked alongside Jackson Myhre in the same bootcamp class. A lot of the routes were taken from class activities and edited to work in this assignment. Other sources: 
 - [Day.js Documentation](https://day.js.org/docs/en/parse/string-format)
 - [AdvancedFormat dates Day.js](https://day.js.org/docs/en/plugin/loading-into-nodejs)
+- [Mongoose Email Validation](https://stackoverflow.com/questions/18022365/mongoose-validate-email-syntax)
 
 ## License
 Licensed by The Unlicense
