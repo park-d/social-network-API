@@ -20,7 +20,7 @@ const thoughtSchema = new Schema(
         createdAt: {
             type: Date,
             default: Date.now,
-            get: (time) => dayjs(time).format("MMM Do YYYY [at] hh:mm A")
+            get: (time) => dayjs(time).format("MMM Do, YYYY [at] hh:mm A")
         },
         username: {
             type: String,
