@@ -1,3 +1,4 @@
+// requiring npm packages
 const {Schema, Types} = require('mongoose');
 const dayjs = require('dayjs')
 
@@ -24,7 +25,7 @@ const reactionSchema = new Schema(
         }
     },
     {
-        // Here we are indicating that we want virtuals to be included with our response, overriding the default behavior
+        // Here we are indicating that we want getters to be included with our response, overriding the default behavior
         toJSON: {
             getters: true,
         },

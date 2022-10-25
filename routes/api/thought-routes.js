@@ -1,5 +1,6 @@
 const router = require('express').Router();
 
+// destructuring the functions from the thought controller file in order to chain them to the separate routes, as to not duplicate route paths
 const {
     getThoughts,
     getThoughtsbyID,
@@ -8,7 +9,7 @@ const {
     deleteThought,
     addReaction,
     removeReaction,
-} = require('../../controllers/thought-controller.js');
+} = require('../../controllers/thought-controller');
 
 // /api/thoughts
 router.route('/').get(getThoughts).post(createThought);

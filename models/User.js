@@ -1,3 +1,4 @@
+// requiring npm packages
 const {Schema, model} = require('mongoose');
 
 // Schema to create User model
@@ -37,6 +38,7 @@ const userSchema = new Schema(
     }
 );
 
+// creating the virtual here, friendCount is the length of the friends array
 userSchema
     .virtual('friendCount')
     // Getter

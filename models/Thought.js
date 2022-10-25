@@ -1,9 +1,12 @@
+// requiring npm packages
 const {Schema, model} = require('mongoose');
-const Reaction = require('./Reaction');
 //using dayjs npm package in order to format the date properly
 const dayjs = require('dayjs')
+// using the advanced format plugin to use "Do" from Dayjs
 var AdvancedFormat = require('dayjs/plugin/advancedFormat')
-dayjs.extend(AdvancedFormat); // using the advanced format plugin to use "Do" from Dayjs
+dayjs.extend(AdvancedFormat); 
+// including the subdocument Reaction in the Thought model
+const Reaction = require('./Reaction');
 
 // Schema to create User model
 const thoughtSchema = new Schema(
@@ -26,7 +29,7 @@ const thoughtSchema = new Schema(
         reactions: [Reaction],
     },
     {
-        // Here we are indicating that we want virtuals to be included with our response, overriding the default behavior
+        // Here we are indicating that we want virtuals and getters to be included with our response, overriding the default behavior
         toJSON: {
             virtuals: true,
             getters: true,
@@ -35,6 +38,7 @@ const thoughtSchema = new Schema(
     }
 );
 
+// creating the virtual here, reactionCount is the length of the reactions array
 thoughtSchema
     .virtual('reactionCount')
     // Getter
@@ -42,7 +46,7 @@ thoughtSchema
         return this.reactions.length;
     });
 
-// Initialize our User model
+// Initialize our Thought model
 const Thought = model('thought', thoughtSchema);
 
 module.exports = Thought;

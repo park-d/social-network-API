@@ -1,3 +1,4 @@
+// took this seed logic from an in class assignment to seed some users into the database for purpose of showing the data in insomnia
 const connection = require('../config/connection');
 const {Thought, User} = require('../models');
 
@@ -12,7 +13,7 @@ connection.once('open', async () => {
     // Drop existing users
     await User.deleteMany({});
 
-    // Add students to the collection and await the results
+    // Add users to the collection and await the results
     await User.collection.insertMany([
         {
             username: "Devan",
